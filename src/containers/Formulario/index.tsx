@@ -31,22 +31,22 @@ const Formulario = () => {
 
   return (
     <MainContainer>
-      <Titulo>Nova tarefa</Titulo>
+      <Titulo>Novo contato</Titulo>
       <Form onSubmit={cadastrarTarefa}>
         <Campo
           value={titulo}
           onChange={(evento) => setTitulo(evento.target.value)}
           type="text"
-          placeholder="Título"
+          placeholder="Nome"
         />
         <Campo
           value={descricao}
           onChange={({ target }) => setDescricao(target.value)}
-          as="textarea"
-          placeholder="Descrição da tarefa"
+          type="text"
+          placeholder="e-mail"
         />
         <Opcoes>
-          <p>Prioridade</p>
+          <p>Categoría</p>
           {Object.values(enums.Prioridade).map((prioridade) => (
             <Opcao key={prioridade}>
               <input
@@ -63,7 +63,7 @@ const Formulario = () => {
             </Opcao>
           ))}
         </Opcoes>
-        <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
+        <BotaoSalvar type="submit">Adicionar</BotaoSalvar>
       </Form>
     </MainContainer>
   )

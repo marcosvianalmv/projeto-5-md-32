@@ -57,11 +57,13 @@ const Tarefa = ({
       <S.Tag parametro="status" status={status}>
         {status}
       </S.Tag>
+      <S.EmailSpan>E-mail:</S.EmailSpan>
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}
         onChange={(evento) => setDescricao(evento.target.value)}
       />
+      <S.EmailSpan>Telefone:</S.EmailSpan>
       <S.BarraAcoes>
         {estaEditando ? (
           <>

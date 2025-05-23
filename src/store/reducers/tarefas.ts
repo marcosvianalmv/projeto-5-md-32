@@ -10,24 +10,24 @@ const initialState: TarefasState = {
   itens: [
     {
       id: 1,
-      descricao: 'Estudar JavaScript revendo o exercício do módulo 7',
+      descricao: 'joao.rodrigues@gmail.com',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
-      titulo: 'Estudar TypeScript'
+      titulo: 'João Rodrigues'
     },
     {
       id: 2,
-      descricao: 'Estudar material de apoio',
+      descricao: 'moliveira@gmail.com',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.PENDENTE,
-      titulo: 'Estudar JavaScript'
+      titulo: 'Maria Oliveira'
     },
     {
       id: 3,
-      descricao: 'Praticar a construção de uma landing page',
+      descricao: 'pedroalcantara@gmail.com',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
-      titulo: 'Estudar Bootstrap'
+      titulo: 'Pedro Alcantara'
     }
   ]
 }
@@ -57,7 +57,7 @@ const tarefasSlice = createSlice({
       )
 
       if (tarefaJaExiste) {
-        alert('Já existe uma tarefa com esse nome')
+        alert('Já existe um contato com esse nome')
       } else {
         const ultimaTarefa = state.itens[state.itens.length - 1]
 

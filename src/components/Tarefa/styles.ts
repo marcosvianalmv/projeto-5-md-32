@@ -50,18 +50,17 @@ export const Tag = styled.span<TagProps>`
   background-color: ${(props) => retornaCorDeFundo(props)};
   border-radius: 8px;
   margin-right: 16px;
+  margin-bottom: 8px;
   display: inline-block;
 `
 
 export const Descricao = styled.textarea`
-  color: #8b8b8b;
+  color: rgb(63, 60, 60);
   font-size: 14px;
-  line-height: 24px;
+  line-height: 16px;
   font-family: 'Roboto monospace', monospace;
   display: block;
   width: 100%;
-  margin-bottom: 16px;
-  margin-top: 16px;
   resize: none;
   border: none;
   background-color: transparent;
@@ -74,4 +73,10 @@ export const BarraAcoes = styled.div`
 
 export const BotaoCancelarRemover = styled(Botao)`
   background-color: ${variaveis.vermelho};
+`
+
+export const EmailSpan = styled.span`
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
 `

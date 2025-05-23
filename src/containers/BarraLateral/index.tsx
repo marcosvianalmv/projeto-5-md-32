@@ -30,19 +30,19 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
             />
             <S.Filtros>
               <FiltroCard
-                valor={enums.Status.PENDENTE}
-                criterio="status"
-                legenda="pendentes"
-              />
-              <FiltroCard
                 valor={enums.Status.CONCLUIDA}
                 criterio="status"
-                legenda="concluidas"
+                legenda="marcados"
+              />
+              <FiltroCard
+                valor={enums.Status.PENDENTE}
+                criterio="status"
+                legenda="desmarcados"
               />
               <FiltroCard
                 valor={enums.Prioridade.URGENTE}
                 criterio="prioridade"
-                legenda="urgentes"
+                legenda="favoritos"
               />
               <FiltroCard
                 valor={enums.Prioridade.IMPORTANTE}
@@ -52,13 +52,15 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
               <FiltroCard
                 valor={enums.Prioridade.NORMAL}
                 criterio="prioridade"
-                legenda="normal"
+                legenda="familiares"
               />
-              <FiltroCard criterio="todas" legenda="todas" />
+              <FiltroCard criterio="todas" legenda="todos" />
             </S.Filtros>
           </>
         ) : (
-          <Botao onClick={() => navigate('/')}>Voltar a lista de tarefas</Botao>
+          <Botao onClick={() => navigate('/')}>
+            Voltar a lista de contatos
+          </Botao>
         )}
       </div>
     </S.Aside>

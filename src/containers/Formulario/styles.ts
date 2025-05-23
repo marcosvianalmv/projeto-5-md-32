@@ -6,11 +6,6 @@ export const Form = styled.form`
   font-weight: bold;
   font-size: 14px;
   color: #666666;
-
-  textarea {
-    resize: none;
-    margin: 16px 0;
-  }
 `
 
 export const Opcoes = styled.div`
