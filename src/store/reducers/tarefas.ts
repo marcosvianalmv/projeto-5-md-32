@@ -11,6 +11,7 @@ const initialState: TarefasState = {
     {
       id: 1,
       descricao: 'joao.rodrigues@gmail.com',
+      telefone: '333333333',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.CONCLUIDA,
       titulo: 'João Rodrigues'
@@ -18,6 +19,7 @@ const initialState: TarefasState = {
     {
       id: 2,
       descricao: 'moliveira@gmail.com',
+      telefone: '777777777',
       prioridade: enums.Prioridade.NORMAL,
       status: enums.Status.PENDENTE,
       titulo: 'Maria Oliveira'
@@ -25,6 +27,7 @@ const initialState: TarefasState = {
     {
       id: 3,
       descricao: 'pedroalcantara@gmail.com',
+      telefone: '999999999',
       prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
       titulo: 'Pedro Alcantara'

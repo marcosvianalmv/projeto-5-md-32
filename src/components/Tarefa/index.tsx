@@ -12,6 +12,7 @@ type Props = TarefaClass
 
 const Tarefa = ({
   descricao: descricaoOriginal,
+  telefone: telefoneOriginal,
   prioridade,
   status,
   titulo,
@@ -20,12 +21,19 @@ const Tarefa = ({
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [descricao, setDescricao] = useState('')
+  const [telefone, setTelefone] = useState('')
 
   useEffect(() => {
     if (descricaoOriginal.length > 0) {
       setDescricao(descricaoOriginal)
     }
   }, [descricaoOriginal])
+
+  useEffect(() => {
+    if (telefoneOriginal.length > 0) {
+      setTelefone(telefoneOriginal)
+    }
+  }, [telefoneOriginal])
 
   function alteraStatusTarefa(evento: ChangeEvent<HTMLInputElement>) {
     console.log(evento.target.checked)
@@ -64,6 +72,11 @@ const Tarefa = ({
         onChange={(evento) => setDescricao(evento.target.value)}
       />
       <S.EmailSpan>Telefone:</S.EmailSpan>
+      <S.Descricao
+        disabled={!estaEditando}
+        value={telefone}
+        onChange={(evento) => setTelefone(evento.target.value)}
+      />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
@@ -72,6 +85,7 @@ const Tarefa = ({
                 dispatch(
                   editar({
                     descricao,
+                    telefone,
                     prioridade,
                     status,
                     titulo,
@@ -87,6 +101,7 @@ const Tarefa = ({
               onClick={() => {
                 setEstaEditando(false)
                 setDescricao(descricaoOriginal)
+                setTelefone(telefoneOriginal)
               }}
             >
               Cancelar

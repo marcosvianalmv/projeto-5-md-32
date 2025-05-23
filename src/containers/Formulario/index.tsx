@@ -13,6 +13,7 @@ const Formulario = () => {
   const navigate = useNavigate()
   const [titulo, setTitulo] = useState('')
   const [descricao, setDescricao] = useState('')
+  const [telefone, setTelefone] = useState('')
   const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL)
 
   const cadastrarTarefa = (evento: FormEvent) => {
@@ -23,6 +24,7 @@ const Formulario = () => {
         titulo,
         prioridade,
         descricao,
+        telefone,
         status: enums.Status.PENDENTE
       })
     )
@@ -37,13 +39,19 @@ const Formulario = () => {
           value={titulo}
           onChange={(evento) => setTitulo(evento.target.value)}
           type="text"
-          placeholder="Nome"
+          placeholder="Nome completo"
         />
         <Campo
           value={descricao}
           onChange={({ target }) => setDescricao(target.value)}
           type="text"
-          placeholder="e-mail"
+          placeholder="E-mail"
+        />
+        <Campo
+          value={telefone}
+          onChange={({ target }) => setTelefone(target.value)}
+          type="text"
+          placeholder="Telefone"
         />
         <Opcoes>
           <p>Categoría</p>
